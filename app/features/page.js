@@ -162,7 +162,7 @@ export default function FeaturesPage() {
                 key={feature.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: false, margin: "-50px" }}
                 transition={{
                   duration: 0.7,
                   delay: feature.delay,
@@ -236,7 +236,7 @@ export default function FeaturesPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="mt-32 relative rounded-[2.5rem] overflow-hidden border border-border/50 bg-card/60 backdrop-blur-xl shadow-2xl"
         >
