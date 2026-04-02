@@ -12,8 +12,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { supabase } from "@/lib/client";
 import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/client";
+
+const supabase = createClient();
 
 export default function Page() {
   const [loading, setLoading] = useState(false);
