@@ -95,7 +95,7 @@ export default function FeaturesPage() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[30%] -right-[10%] w-[70vw] h-[70vw] rounded-full bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 blur-[120px] mix-blend-screen overflow-hidden"
+          className="absolute -top-[30%] -right-[10%] w-[70vw] h-[70vw] rounded-full  blur-[120px] mix-blend-screen overflow-hidden"
         />
         <motion.div
           animate={{ rotate: -360 }}
@@ -113,11 +113,7 @@ export default function FeaturesPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="flex items-center justify-center gap-2 mb-6"
-          >
-            <span className="px-4 py-1.5 text-xs font-bold tracking-widest text-indigo-600 bg-indigo-600/10 rounded-full border border-indigo-600/20 uppercase shadow-sm">
-              Platform Features
-            </span>
-          </motion.div>
+          ></motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -131,7 +127,7 @@ export default function FeaturesPage() {
             style={{ lineHeight: 1.1 }}
           >
             Everything you need to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+            <span className="bg-clip-text text-neutral-500">
               publish beautifully
             </span>
           </motion.h1>
