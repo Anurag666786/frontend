@@ -68,7 +68,7 @@ export default function Page() {
             className="relative overflow-hidden rounded-2xl group"
           >
             <Image
-              src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1470"
+              src="https://images.unsplash.com/photo-1503945438517-f65904a52ce6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Story"
               width={800}
               height={600}
@@ -204,15 +204,16 @@ export default function Page() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative overflow-hidden rounded-2xl"
+            className="relative overflow-hidden rounded-2xl group"
           >
             <Image
-              src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1470"
+              src="https://plus.unsplash.com/premium_photo-1661339265887-be15949790ff?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Reading"
               width={800}
               height={600}
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition duration-1000"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           </motion.div>
         </div>
       </motion.section>
