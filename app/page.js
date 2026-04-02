@@ -188,8 +188,19 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: false, margin: "-100px" }}
         transition={{ duration: 1 }}
-        className="relative py-32 px-8 max-w-7xl mx-auto"
+        className="relative py-32 px-8 max-w-7xl mx-auto space-y-12"
       >
+        <motion.div className="flex items-center justify-between border-b border-neutral-800 pb-4">
+          <h2 className="text-sm uppercase tracking-widest font-semibold text-neutral-500">
+            Editor's Choice
+          </h2>
+          <Link
+            href="#"
+            className="text-sm hover:text-white transition-colors flex items-center gap-2"
+          >
+            View all <span className="text-lg">→</span>
+          </Link>
+        </motion.div>
         {/* Background glow */}
         <div className="absolute inset-0 flex justify-center pointer-events-none">
           <div className="w-[600px] h-[400px] bg-white/[0.03] blur-[140px] rounded-full" />
@@ -636,6 +647,193 @@ export default function Home() {
             className="text-center mt-16 text-neutral-500 text-xs tracking-wide"
           >
             No distractions. No ads. Just ideas that matter.
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* --- Ultra Premium Experience Section --- */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, margin: "-100px" }}
+        transition={{ duration: 1 }}
+        className="relative py-40 px-8 max-w-7xl mx-auto overflow-hidden"
+      >
+        {/* Background Glow Layers */}
+        <div className="absolute inset-0 flex justify-center pointer-events-none">
+          <div className="w-[800px] h-[500px] bg-white/[0.04] blur-[160px] rounded-full" />
+        </div>
+
+        <div className="relative z-10">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-center max-w-4xl mx-auto mb-24"
+          >
+            <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6">
+              Built for the <br />
+              <span className="text-neutral-500">modern intellectual.</span>
+            </h2>
+
+            <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto">
+              Not just content. A refined environment crafted for clarity,
+              focus, and depth in an age of distraction.
+            </p>
+          </motion.div>
+
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Clarity First",
+                desc: "Every interface decision removes friction and enhances thinking.",
+              },
+              {
+                title: "Calm Interface",
+                desc: "Designed to reduce noise and elevate focus instantly.",
+              },
+              {
+                title: "Timeless Feel",
+                desc: "Aesthetic that feels relevant today — and years from now.",
+              },
+              {
+                title: "Minimalistic Design",
+                desc: "A clean, simple interface that lets the content shine.",
+              },
+              {
+                title: "Precise Focus",
+                desc: "Every element is intentional, guiding your attention to what matters.",
+              },
+              {
+                title: "Premium Reading",
+                desc: "A distraction-free environment designed for deep thinking and reflection.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: i * 0.15 }}
+                whileHover={{ scale: 1.04 }}
+                className="group relative p-[1px] rounded-3xl bg-gradient-to-b from-white/10 to-transparent"
+              >
+                {/* Glass Card */}
+                <div className="relative rounded-3xl bg-neutral-900/60 backdrop-blur-2xl p-8 h-full border border-neutral-800 overflow-hidden">
+                  {/* Hover Glow Effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] to-transparent blur-xl" />
+                  </div>
+
+                  <h3 className="text-white text-2xl font-semibold mb-4 group-hover:text-neutral-300 transition">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-neutral-400 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  {/* Bottom subtle line */}
+                  <div className="mt-8 w-12 h-[1px] bg-neutral-700 group-hover:w-20 transition-all duration-500" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* --- Premium Impact / Stats Section --- */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, margin: "-100px" }}
+        transition={{ duration: 1 }}
+        className="relative py-36 px-8 max-w-7xl mx-auto"
+      >
+        {/* Ambient Glow */}
+        <div className="absolute inset-0 flex justify-center pointer-events-none">
+          <div className="w-[700px] h-[400px] bg-white/[0.04] blur-[140px] rounded-full" />
+        </div>
+
+        <div className="relative z-10">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="text-center max-w-3xl mx-auto mb-20"
+          >
+            <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
+              Trusted by thinkers <br />
+              <span className="text-neutral-500">around the world.</span>
+            </h2>
+
+            <p className="text-neutral-400 text-lg">
+              A growing community built on clarity, depth, and meaningful ideas.
+            </p>
+          </motion.div>
+
+          {/* Stats Grid */}
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { number: "120K+", label: "Monthly Readers" },
+              { number: "45+", label: "Countries Reached" },
+              { number: "3.2M+", label: "Articles Read" },
+              { number: "98%", label: "Positive Feedback" },
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: i * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                className="group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent"
+              >
+                <div className="relative rounded-2xl bg-neutral-900/60 backdrop-blur-xl border border-neutral-800 p-6 text-center overflow-hidden">
+                  {/* Hover glow */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] to-transparent blur-xl" />
+                  </div>
+
+                  <motion.h3
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: i * 0.15 }}
+                    className="text-3xl md:text-4xl font-bold text-white mb-2"
+                  >
+                    {stat.number}
+                  </motion.h3>
+
+                  <p className="text-neutral-400 text-sm tracking-wide">
+                    {stat.label}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="h-[1px] bg-neutral-800 my-20"
+          />
+
+          {/* Testimonial / Quote */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <p className="text-xl md:text-2xl text-neutral-300 leading-relaxed mb-6">
+              “In a world full of noise, this platform feels like silence — in
+              the best possible way.”
+            </p>
+
+            <span className="text-neutral-500 text-sm">— Anurag</span>
           </motion.div>
         </div>
       </motion.section>
