@@ -12,6 +12,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { supabase } from "@/lib/supabaseClient";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const [loading, setLoading] = useState(false);
@@ -23,14 +25,47 @@ export default function Page() {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    console.log(type, data);
+    try {
+      if (type === "signin") {
+        const { error } = await supabase.auth.signInWithPassword({
+          email: data.email,
+          password: data.password,
+        });
 
-    // TODO: connect backend API here
+        if (error) throw error;
 
-    setTimeout(() => {
+        alert("Signed in successfully!");
+      }
+
+      if (type === "signup") {
+        const { data: userData, error } = await supabase.auth.signUp({
+          email: data.email,
+          password: data.password,
+        });
+
+        if (error) throw error;
+
+        // Insert username into profiles table
+        if (userData.user) {
+          await supabase.from("profiles").insert([
+            {
+              id: userData.user.id,
+              username: data.username,
+            },
+          ]);
+        }
+
+        alert("Account created successfully!");
+      }
+    } catch (err) {
+      alert(err.message);
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
+
+  const router = useRouter();
+  router.push("/");
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-950 via-zinc-900 to-black px-4">
