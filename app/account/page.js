@@ -18,6 +18,8 @@ import { useRouter } from "next/navigation";
 export default function Page() {
   const [loading, setLoading] = useState(false);
 
+  const router = useRouter();
+
   const handleSubmit = (type) => async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -35,6 +37,7 @@ export default function Page() {
         if (error) throw error;
 
         alert("Signed in successfully!");
+        router.push("/"); // ✅ redirect AFTER login
       }
 
       if (type === "signup") {
@@ -45,7 +48,6 @@ export default function Page() {
 
         if (error) throw error;
 
-        // Insert username into profiles table
         if (userData.user) {
           await supabase.from("profiles").insert([
             {
@@ -56,6 +58,7 @@ export default function Page() {
         }
 
         alert("Account created successfully!");
+        router.push("/"); // ✅ redirect AFTER signup
       }
     } catch (err) {
       alert(err.message);
@@ -63,9 +66,6 @@ export default function Page() {
       setLoading(false);
     }
   };
-
-  const router = useRouter();
-  router.push("/");
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-950 via-zinc-900 to-black px-4">
