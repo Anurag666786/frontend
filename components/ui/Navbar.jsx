@@ -85,7 +85,7 @@ export default function Navbar() {
           {/* Desktop Right Actions */}
 
           <a
-            href="./account"
+            href="https://backend-beta-nine-50.vercel.app/"
             className="relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-primary-foreground bg-primary rounded-full overflow-hidden group transition-transform hover:scale-105 active:scale-95"
           >
             <span className="absolute inset-0 w-full h-full bg-white/20 group-hover:translate-x-full transition-transform duration-500 ease-out -translate-x-full"></span>
