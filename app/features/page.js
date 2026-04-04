@@ -127,7 +127,7 @@ export default function FeaturesPage() {
             style={{ lineHeight: 1.1 }}
           >
             Everything you need to{" "}
-            <span className="bg-clip-text text-neutral-500">
+            <span className="bg-clip-text text-neutral-500 animate-pulse">
               publish beautifully
             </span>
           </motion.h1>

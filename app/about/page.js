@@ -40,7 +40,7 @@ export default function Page() {
           className="text-5xl md:text-7xl text-center items-center justify-center font-bold text-white tracking-tight leading-[1.1] mb-6"
         >
           A space built for <br />
-          <span className="text-neutral-500">deep thinking.</span>
+          <span className="text-neutral-500 animate-pulse">deep thinking.</span>
         </motion.h1>
 
         <motion.p
