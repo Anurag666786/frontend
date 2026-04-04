@@ -90,7 +90,9 @@ export default function Home() {
             className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1] mb-6"
           >
             Ideas that shape <br className="hidden md:block" />
-            <span className="text-neutral-500">the modern mind.</span>
+            <span className="text-neutral-500 animate-pulse">
+              the modern mind.
+            </span>
           </motion.h1>
 
           <motion.p
@@ -564,7 +566,9 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
               Go beyond reading. <br />
-              <span className="text-neutral-500">Enter the inner circle.</span>
+              <span className="text-neutral-500 animate-pulse">
+                Enter the inner circle.
+              </span>
             </h2>
 
             <p className="text-neutral-400 text-lg leading-relaxed">
@@ -674,7 +678,9 @@ export default function Home() {
           >
             <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6">
               Built for the <br />
-              <span className="text-neutral-500">modern intellectual.</span>
+              <span className="text-neutral-500 animate-pulse">
+                modern intellectual.
+              </span>
             </h2>
 
             <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto">
@@ -766,7 +772,9 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
               Trusted by thinkers <br />
-              <span className="text-neutral-500">around the world.</span>
+              <span className="text-neutral-500 animate-pulse">
+                around the world.
+              </span>
             </h2>
 
             <p className="text-neutral-400 text-lg">
@@ -861,7 +869,9 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
               Designed for those who <br />
-              <span className="text-neutral-500">think deeper.</span>
+              <span className="text-neutral-500 animate-pulse">
+                think deeper.
+              </span>
             </h2>
 
             <p className="text-neutral-400 text-lg leading-relaxed mb-8 max-w-xl">
