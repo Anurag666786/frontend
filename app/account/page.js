@@ -13,13 +13,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/client";
-
-const supabase = createClient();
 
 export default function Page() {
   const [loading, setLoading] = useState(false);
-
   const router = useRouter();
 
   const handleSubmit = (type) => async (e) => {
@@ -30,40 +26,29 @@ export default function Page() {
     const data = Object.fromEntries(formData.entries());
 
     try {
+      // 🔥 Placeholder logic (you will replace this)
       if (type === "signin") {
-        const { error } = await supabase.auth.signInWithPassword({
-          email: data.email,
-          password: data.password,
-        });
+        console.log("SIGN IN DATA:", data);
 
-        if (error) throw error;
+        // Example:
+        // await fetch("/api/login", { method: "POST", body: JSON.stringify(data) })
 
-        alert("Signed in successfully!");
-        router.push("/"); // ✅ redirect AFTER login
+        alert("Signed in (frontend only)");
+        router.push("/");
       }
 
       if (type === "signup") {
-        const { data: userData, error } = await supabase.auth.signUp({
-          email: data.email,
-          password: data.password,
-        });
+        console.log("SIGN UP DATA:", data);
 
-        if (error) throw error;
+        // Example:
+        // await fetch("/api/register", { method: "POST", body: JSON.stringify(data) })
 
-        if (userData.user) {
-          await supabase.from("profiles").insert([
-            {
-              id: userData.user.id,
-              username: data.username,
-            },
-          ]);
-        }
-
-        alert("Account created successfully!");
-        router.push("/"); // ✅ redirect AFTER signup
+        alert("Account created (frontend only)");
+        router.push("/");
       }
     } catch (err) {
-      alert(err.message);
+      alert("Something went wrong");
+      console.error(err);
     } finally {
       setLoading(false);
     }
