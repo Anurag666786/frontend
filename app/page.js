@@ -107,7 +107,10 @@ export default function Home() {
           {/* Get Started Button */}
           <motion.div variants={itemVariants}>
             <button className="group relative inline-flex items-center justify-center px-9 py-3 text-md font-medium text-black bg-white/100 border border-white/10 rounded-xl backdrop-blur-md hover:bg-white/70 transition-all duration-300">
-              <Link href="./account" className="relative z-10">
+              <Link
+                href="https://backend-n546l9pjo-anurag-developers.vercel.app/"
+                className="relative z-10"
+              >
                 Get Started →
               </Link>
 
@@ -134,7 +137,7 @@ export default function Home() {
               Selected Works
             </h2>
             <Link
-              href="#"
+              href="https://backend-n546l9pjo-anurag-developers.vercel.app/"
               className="text-sm hover:text-white transition-colors flex items-center gap-2"
             >
               View all <span className="text-lg">→</span>
@@ -197,7 +200,7 @@ export default function Home() {
             Editor's Choice
           </h2>
           <Link
-            href="#"
+            href="https://backend-n546l9pjo-anurag-developers.vercel.app/"
             className="text-sm hover:text-white transition-colors flex items-center gap-2"
           >
             View all <span className="text-lg">→</span>
@@ -881,14 +884,14 @@ export default function Home() {
 
             <div className="flex items-center gap-4">
               <Link
-                href="./account"
+                href="https://backend-n546l9pjo-anurag-developers.vercel.app/"
                 className="px-6 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-neutral-200 transition-all duration-300"
               >
                 Explore Articles
               </Link>
 
               <Link
-                href="#"
+                href="./about"
                 className="text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-2"
               >
                 Learn more <span className="text-lg">→</span>

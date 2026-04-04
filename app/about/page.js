@@ -193,7 +193,7 @@ export default function Page() {
             </p>
 
             <Link
-              href="/"
+              href="https://backend-n546l9pjo-anurag-developers.vercel.app/"
               className="inline-block px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:bg-neutral-200 transition"
             >
               Explore Articles →
@@ -230,15 +230,19 @@ export default function Page() {
         </h2>
 
         <p className="text-neutral-400 mb-10">
-          Not for everyone. Only for those who value depth over noise.
+          Not for everyone—only for those who choose depth over noise, clarity
+          over chaos, and meaning over mere distraction. This platform is built
+          for individuals who seek more than just surface-level content, who
+          believe that true knowledge comes from thoughtful exploration, honest
+          expression, and a willingness to engage with ideas that challenge and
+          inspire. In a world overflowing with information, we focus on what
+          truly matters—insight, perspective, and purposeful conversations that
+          leave a lasting impact. If you are someone who values learning,
+          growth, and authenticity, then this is your space. Join this community
+          not just as a reader, but as a contributor, a thinker, and a core part
+          of a growing family that believes in the power of meaningful
+          content.{" "}
         </p>
-
-        <Link
-          href="/account"
-          className="px-8 py-3 bg-white text-black rounded-full font-medium hover:bg-neutral-200 transition"
-        >
-          Get Started →
-        </Link>
       </motion.section>
     </main>
   );
